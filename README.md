@@ -60,6 +60,8 @@ To deploy this application to Heroku, the <b>Callback URL</b> & <b>redirect_uri<
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+This feature is not working, see <b>Known Issues</b>.
+
 ## Packages used
 
 All Autodesk Forge NPM packages are included by default, see complete list of what's available at [NPM website](https://www.npmjs.com/browse/keyword/autodesk). OAuth and Data Management API are used. [Box SDK](https://docs.box.com/page/sdks) for NodeJS is [box-node-sdk](https://www.npmjs.com/package/box-node-sdk). Some other non-Autodesk packaged are used, including [express](https://www.npmjs.com/package/express) and its session/cookie middlewares ([express-session](https://www.npmjs.com/package/express-session) and [cookie-parser](https://www.npmjs.com/package/cookie-parser)) for user session handling. The front-end uses [bootsrap](https://www.npmjs.com/package/bootstrap) and [jquery](https://www.npmjs.com/package/jquery).
@@ -76,9 +78,9 @@ Then, instead of <b>npm run dev</b>, use the following:
 
 Which executes <b>nodemon server.js --ignore www/</b>, where the <b>--ignore</b> parameter indicates that the app should not restart if files under <b>www</b> folder are modified.
 
-## Know issues
+## Known issues
 
-As of today (Augusto, 31, 2016), the <b>forge-data-management</b> need a small at /node_modules/forge-data-management/src/ApiClient.js, line 425: replace <b>data</b> with <b>body</b>.
+As of today (August, 31, 2016), the <b>forge-data-management</b> package need a small fix at <u>/node_modules/forge-data-management/src/ApiClient.js</u>, line 425: replace <b>data</b> with <b>body</b>.
 
     _resolve (body/*data*/) ;
 
