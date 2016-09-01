@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Basic integration between Data Management API & Box",
   "dependencies": {
+    "body-parser": "*",
     "bootstrap": "*",
     "box-node-sdk": "*",
     "cookie-parser": "*",
