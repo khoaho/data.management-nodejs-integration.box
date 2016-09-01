@@ -36,12 +36,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a href="#" id="signInButton">
-          <span id="signInProfileImage">
-            <img src="/img/autodesk-logo.png" class="gray" style="vertical-align: top;" height="16"/>
-          </span>
-          <span id="signInButtonText" title="Sign in with your Autodesk Account">Account</span>
-        </a>
+
       </li>
     </ul>
   </div>
@@ -51,7 +46,14 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="panel panel-default">
-        <div class="panel-heading" data-toggle="tooltip"> Autodesk Hubs</div>
+        <div class="panel-heading" data-toggle="tooltip"> Autodesk Hubs
+          <button id="signInButton" style="float:right;" class="btn btn-xs btn-default">
+          <span id="signInProfileImage">
+            <img src="/img/autodesk-logo.png" height="16"/>
+          </span>
+            <span id="signInButtonText" title="Sign in with your Autodesk Account">Account</span>
+          </button>
+        </div>
         <div id="myAutodeskFiles" class="foldertree">
         </div>
       </div>
@@ -71,7 +73,8 @@
 </div>
 <footer class="footer">
   <div class="container">
-    <span>Right-click on Autodesk Hubs <span class="glyphicon glyphicon-time">Versions</span> to send to Box, or on Box Folder <span class="glyphicon glyphicon-file">Files</span> to send to Autodesk.</span>
+    <span>Right-click on Autodesk Hubs <span class="glyphicon glyphicon-time">Versions</span> to send to Box, or on Box Folder <span
+        class="glyphicon glyphicon-file">Files</span> to send to Autodesk.</span>
   </div>
 </footer>
 </body>

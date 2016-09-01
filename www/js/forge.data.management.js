@@ -105,6 +105,7 @@ function sendToBox(autodeskNode, boxNode) {
       $('#myBoxFiles').jstree(true).refresh_node(boxNode);
     },
     error: function (res) {
+      res = JSON.parse(res.responseText);
       $.notify(res.error, 'error');
     }
   });

@@ -95,7 +95,11 @@ router.post('/integration/sendToBox', jsonParser, function (req, res) {
 
       var box = sdk.getBasicClient(tokenSession.getBoxToken());
       box.files.uploadFile(boxFolderId, version.data.attributes.name, file, function (err, data) {
-        res.status(200).json({file: version.data.attributes.name});
+        if (err)
+          res.status(500).json({error: err.message});
+        else
+          res.status(200).json({file: version.data.attributes.name});
+        return;
       });
     });//.catch(function (e) { res.status(e.error.statusCode).json({error: e.error.body}) });
   }).catch(function (e) { res.status(e.error.statusCode).json({error: e.error.body}) });
