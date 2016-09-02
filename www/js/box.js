@@ -18,10 +18,16 @@
 
 $(document).ready(function () {
   var auth = isBoxAuthorized();
-  if (!isBoxAuthorized())
+  if (!isBoxAuthorized()) {
+    $('#refreshBoxTree').hide();
     $('#loginBox').click(boxSignIn);
+  }
   else {
     $('#loginBox').hide();
+    $('#refreshBoxTree').show();
+    $('#refreshBoxTree').click(function(){
+      $('#myBoxFiles').jstree(true).refresh();
+    });
     prepareBoxTree();
   }
 });

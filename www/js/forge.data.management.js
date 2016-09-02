@@ -17,11 +17,14 @@
 /////////////////////////////////////////////////////////////////////
 
 $(document).ready(function () {
-  $('#switch').on('click', function () {
-    $('div.toggle').toggleClass('switch');
-  });
-  if (getForgeToken() != '')
+  $('#refreshAutodeskTree').hide();
+  if (getForgeToken() != '') {
     prepareDataManagementTree();
+    $('#refreshAutodeskTree').show();
+    $('#refreshAutodeskTree').click(function(){
+      $('#myAutodeskFiles').jstree(true).refresh();
+    });
+  }
 });
 
 function prepareDataManagementTree() {
