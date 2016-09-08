@@ -41,7 +41,7 @@ router.get('/box/authenticate', function (req, res) {
 });
 
 // wait for box callback (oAuth callback)
-router.get('/callback/box', function (req, res) {
+router.get('/api/box/callback/oauth', function (req, res) {
   var code = req.query.code;
   var tokenSession = new token(req.session);
 

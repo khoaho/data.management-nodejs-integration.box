@@ -23,7 +23,7 @@ module.exports = {
   // Autodesk Forge configuration
 
   // this this callback URL when creating your client ID and secret
-  callbackURL: process.env.FORGE_CALLBACK_URL || 'http://localhost:3000/callback/autodesk',
+  callbackURL: process.env.FORGE_CALLBACK_URL || 'http://localhost:3000/api/forge/callback/oauth',
 
   // set enviroment variables or hard-code here
   credentials: {
@@ -38,7 +38,7 @@ module.exports = {
 
   // BOX configuration
   box: {
-    callbackURL: process.env.BOX_CALLBACK_URL || 'http://localhost:3000/callback/box',
+    callbackURL: process.env.BOX_CALLBACK_URL || 'http://localhost:3000/api/box/callback/oauth',
     credentials: {
       client_id: process.env.BOX_CLIENT_ID || '<replace with your box client id',
       client_secret: process.env.BOX_CLIENT_SECRET || '<replace with your box client secret'
